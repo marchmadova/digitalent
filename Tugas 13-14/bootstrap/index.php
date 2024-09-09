@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        .slogan-img {
+            width: 100%; /* Atur lebar gambar sesuai dengan lebar header */
+            height: 100%; /* Sesuaikan tinggi gambar  */
+        }
+        .slogan-header {
+            width: 100%; /* Atur lebar header sesuai kebutuhan */
+            height: 10cm; /* Atur tinggi header sesuai kebutuhan */
+        }
+        .navbar-nav .nav-link {
+            font-size: 1rem; /* Sesuaikan ukuran font navbar items */
+            font-family: inherit; /* Sesuaikan jenis font navbar items */
+            color: rgba(255, 255, 255, 0.55); /* Warna teks default */
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .dropdown-toggle:hover {
+            color: white; /* Warna teks saat hover */
+        }
+        .card-img-top {
+            height: 200px; /* Atur tinggi gambar card agar seragam */
+            object-fit: cover; /* Memastikan gambar memenuhi kotak tanpa merusak rasio aspek */
+        }
+        .gallery-item {
+            margin-bottom: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-img-top {
+    height: 250px; /* Atur tinggi gambar card agar seragam */
+    object-fit: cover; /* Memastikan gambar memenuhi kotak tanpa merusak rasio aspek */
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    flex-grow: 1; /* Mengatur body card agar memanjang sesuai konten */
+}
+.footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid #dee2e6;
+        }
+        .footer p {
+            margin: 0;
+            color: #6c757d;
+        }
+
+  </style>
+  
+</head>
+<body>
+    <!-- Header with Slogan Image -->
+    <header class="jumbotron jumbotron-fluid text-center bg-light slogan-header" id="beranda">
+        <img src="foto/slogan.png" alt="Slogan Surabaya" class="img-fluid slogan-img">
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-link" href="#beranda">BERANDA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand nav-link" href="#about">ABOUT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand nav-link" href="#obyekwisata">OBYEK WISATA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand nav-link" href="#galeri">GALERI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand nav-link" href="modifikasi.php">MODIFIKASI PESANAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            PAKET WISATA
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#paketwisata">Paket Wisata 1</a></li>
+                            <li><a class="dropdown-item" href="#paketwisata">Paket Wisata 2</a></li>
+                            <li><a class="dropdown-item" href="#paketwisata">Paket Wisata 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tentang Surabaya -->
+    <div class="container mt-5" id="about">
+        <div class="row">
+            <!-- Kolom 1 -->
+            <div class="col-md-6">
+                <div class="about-surabaya">
+                    <h2>Tentang Surabaya</h2>
+                    <p>Surabaya, ibu kota Provinsi Jawa Timur, adalah salah satu kota terbesar di Indonesia yang kaya akan sejarah, budaya, dan kehidupan metropolitan yang dinamis. Terletak di pantai utara Jawa, kota ini tidak hanya menjadi pusat perdagangan dan industri, tetapi juga memiliki pesona alam dan warisan budaya yang menakjubkan.</p>
+                    <h3>Sejarah</h3>
+                    <p>Surabaya memiliki sejarah panjang sebagai pusat perdagangan dan pelabuhan penting di Nusantara. Sebagai salah satu kota tertua di Indonesia, Surabaya telah menyaksikan berbagai peristiwa penting dalam sejarah nasional, termasuk menjadi saksi perjuangan kemerdekaan Indonesia.</p>
+                </div>
+            </div>
+            <!-- Kolom 2 -->
+            <div class="col-md-6">
+                <div class="about-surabaya">
+                    <h3>Budaya dan Warisan</h3>
+                    <p>Keanekaragaman budaya Surabaya tercermin dalam berbagai aspek kehidupan sehari-hari, dari seni tradisional hingga kuliner khas yang lezat. Tempat-tempat seperti Kampung Arab, Chinatown, dan pelbagai museum menawarkan wawasan mendalam tentang warisan budaya kota ini.</p>
+                    <h3>Wisata dan Rekreasi</h3>
+                    <p>Surabaya menawarkan berbagai obyek wisata menarik, mulai dari taman-taman indah hingga pusat perbelanjaan modern. Beberapa tempat yang populer termasuk Monumen Kapal Selam, Taman Bungkul, Suroboyo Carnival Park, dan masih banyak lagi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Videos -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <!-- Video 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B58qJkelR-s" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Daftar Obyek Wisata -->
+<div class="container mt-5" id="obyekwisata">
+  <h2 class="text-center mb-4">Obyek Wisata</h2>
+  <div class="row">
+      <!-- Obyek 1 -->
+      <div class="col-md-4">
+          <div class="card">
+              <img src="foto/ob1.jpg" class="card-img-top" alt="Monumen Kapal Selam">
+              <div class="card-body">
+                  <h5 class="card-title">Monumen Kapal Selam</h5>
+                  <p class="card-text">Sebuah monumen unik yang merupakan bekas kapal selam militer yang diubah menjadi museum.</p>
+              </div>
+          </div>
+      </div>
+      <!-- Obyek 1.2 -->
+      <div class="col-md-4">
+          <div class="card">
+              <img src="foto/ob1.2.jpg" class="card-img-top" alt="Taman Bungkul">
+              <div class="card-body">
+                  <h5 class="card-title">Taman Bungkul</h5>
+                  <p class="card-text">Taman yang populer di tengah kota dengan berbagai fasilitas rekreasi dan kuliner.</p>  
+              </div>
+          </div>
+      </div>
+      <!-- Obyek 1.3 -->
+      <div class="col-md-4">
+          <div class="card">
+              <img src="foto/ob1.3.jpg" class="card-img-top" alt="Kampung Arab">
+              <div class="card-body">
+                  <h5 class="card-title">Kampung Arab</h5>
+                  <p class="card-text">Kawasan dengan nuansa Arab yang kental, dikenal dengan kuliner dan arsitektur yang khas.</p>
+              </div>
+          </div>
+      </div>
+      <!-- Obyek 1.4 -->
+      <div class="col-md-4 mt-4">
+          <div class="card">
+              <img src="foto/ob1.4.jpg" class="card-img-top" alt="Chinatown">
+              <div class="card-body">
+                  <h5 class="card-title">Chinatown</h5>
+                  <p class="card-text">Kawasan dengan kebudayaan Tionghoa yang kental, terkenal dengan kuliner dan tradisi budaya.</p>
+              </div>
+          </div>
+      </div>
+      <!-- Obyek 1.5 -->
+      <div class="col-md-4 mt-4">
+          <div class="card">
+              <img src="foto/ob1.5.jpg" class="card-img-top" alt="Museum Surabaya">
+              <div class="card-body">
+                  <h5 class="card-title">Museum Surabaya</h5>
+                  <p class="card-text">Menawarkan wawasan mendalam tentang sejarah dan budaya kota Surabaya.</p>
+              </div>
+          </div>
+      </div>
+      <!-- Obyek 1.6 -->
+      <div class="col-md-4 mt-4">
+          <div class="card">
+              <img src="foto/ob1.6.jpg" class="card-img-top" alt="Pantai Kenjeran">
+              <div class="card-body">
+                  <h5 class="card-title">Pantai Kenjeran</h5>
+                  <p class="card-text">Pantai yang indah dengan berbagai fasilitas wisata dan tempat makan.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+    <!-- Daftar Paket Wisata-->
+    <div class="container mt-5" id="paketwisata">
+      <h2 class="text-center mb-4">Paket Wisata</h2>
+        <div class="row">
+            <!-- Paket 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="foto/wisata1.jpg" class="card-img-top" alt="Wisata 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket Wisata 1 </h5>
+                        <p class="card-text">Nikmati pemandangan indah dan pengalaman tak terlupakan.</p>
+                        <p class="card-text"><strong>Harga: Rp 1.000.000</strong></p>
+                        <!-- Tombol Daftar Paket 1 -->
+                        <a href="formPemesanan.php" class="btn btn-primary mt-3">Daftar Paket</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Paket 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="foto/wisata2.jpg" class="card-img-top" alt="Wisata 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket Wisata 2</h5>
+                        <p class="card-text">Rasakan petualangan seru dan menyenangkan.</p>
+                        <p class="card-text"><strong>Harga: Rp 1.500.000</strong></p>
+                        <!-- Tombol Daftar Paket 2 -->
+                        <a href="formPemesanan.php" class="btn btn-primary mt-3">Daftar Paket</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Paket 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="foto/wisata3.jpg" class="card-img-top" alt="Wisata 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Paket Wisata 3</h5>
+                        <p class="card-text">Jelajahi keindahan alam dan budaya lokal.</p>
+                        <br>
+                        <p class="card-text"><strong>Harga: Rp 2.000.000</strong></p>
+                        <!-- Tombol Daftar Paket 3 -->
+                        <a href="formPemesanan.php" class="btn btn-primary mt-3">Daftar Paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeri -->
+    <div class="container mt-5" id="galeri">
+        <h2 class="text-center mb-4">Galeri</h2>
+        <div class="row">
+            <!-- Gambar 1 -->
+            <div class="col-md-3 gallery-item">
+                <img src="foto/galeri1.jpg" class="img-fluid" alt="Galeri 1">
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-md-3 gallery-item">
+                <img src="foto/galeri2.jpg" class="img-fluid" alt="Galeri 2">
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-md-3 gallery-item">
+                <img src="foto/galeri3.jpg" class="img-fluid" alt="Galeri 3">
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-md-3 gallery-item">
+                <img src="foto/galeri4.jpg" class="img-fluid" alt="Galeri 4">
+            </div>
+            <!-- Gambar 5 -->
+            <div class="col-md-3 gallery-item">
+                <img src="foto/galeri5.jpg" class="img-fluid" alt="Galeri 5">
+            </div>
+            <!-- Gambar 6 -->
+            <div class="col-md-3 gallery-item">
+                <img src="foto/galeri6.jpg" class="img-fluid" alt="Galeri 6">
+            </div>
+            <!-- Gambar 7 -->
+            <div class="col-md-3 gallery-item">
+                <img src="foto/galeri7.jpg" class="img-fluid" alt="Galeri 7">
+            </div>
+            <!-- Gambar 8 -->
+            <div class="col-md-3 gallery-item">
+                <img src="foto/galeri8.jpg" class="img-fluid" alt="Galeri 8">
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="footer">
+      <div class="container">
+          <p>&copy; 2024 oleh <a href="#">March Madova J</a>. Semua Hak Cipta Dilindungi.</p>
+      </div>
+  </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

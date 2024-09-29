@@ -28,7 +28,7 @@
 
             var totalTagihan = (hargaPaket + hargaPelayanan) * waktuPerjalanan * jumlahPeserta;
 
-            document.getElementById("jumlah_tagihan").value = totalTagihan.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
+            document.getElementById("jumlah_tagihan").value = totalTagihan.toFixed(2); // Format dengan dua angka di belakang koma
         }
     </script>
 </head>

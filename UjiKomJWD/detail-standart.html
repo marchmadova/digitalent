@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Detail Kamar Standar - March Hotel</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .room-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .video-container {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+        .col-md-6 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .col-md-6 img {
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid #dee2e6;
+        }
+        .footer p {
+            margin: 0;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">BERANDA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="modifikasi.php">MODIFIKASI PESANAN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+    <h1>Detail Kamar Standar</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="foto/hotel standart.jpg" alt="Kamar Standar" class="room-image">
+        </div>
+        <div class="col-md-6 video-container">
+            <video width="100%" controls>
+                <source src="foto/vidStandart.MP4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+        </div>
+    </div>
+
+    <p>Kamar Standar kami dirancang untuk memberikan kenyamanan dengan fasilitas lengkap. Dapatkan pengalaman menginap yang nyaman dan menyenangkan.</p>
+    <p><strong>Fasilitas:</strong></p>
+    <ul>
+        <li>Kamar dengan AC</li>
+        <li>TV layar datar</li>
+        <li>Koneksi Wi-Fi gratis</li>
+        <li>Minibar</li>
+        <li>Kamar mandi pribadi dengan shower</li>
+    </ul>
+    <p><strong>Harga: Rp 1.000.000 per malam</strong></p>
+
+   
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 oleh <a href="#">March Madova J</a>. Semua Hak Cipta Dilindungi.</p>
+    </div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -11,9 +11,32 @@ if ($koneksi->connect_error) {
     die("Koneksi gagal: " . $koneksi->connect_error);
 }
 
+// Simpan pesanan
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = isset($_POST['nama']) ? htmlspecialchars($_POST['nama']) : '';
+    $nomor_hp = isset($_POST['nomor_hp']) ? htmlspecialchars($_POST['nomor_hp']) : '';
+    $tanggal_pesan = isset($_POST['tanggal_pesan']) ? htmlspecialchars($_POST['tanggal_pesan']) : '';
+    $waktu_perjalanan = isset($_POST['waktu_perjalanan']) ? htmlspecialchars($_POST['waktu_perjalanan']) : '';
+    $jumlah_peserta = isset($_POST['jumlah_peserta']) ? htmlspecialchars($_POST['jumlah_peserta']) : '';
+    $harga_paket = isset($_POST['harga_paket']) ? htmlspecialchars($_POST['harga_paket']) : '';
+    $pelayanan = isset($_POST['pelayanan']) && is_array($_POST['pelayanan']) ? implode(', ', $_POST['pelayanan']) : '';
+    $jumlah_tagihan = isset($_POST['jumlah_tagihan']) ? htmlspecialchars($_POST['jumlah_tagihan']) : '';
+
+    // Query untuk menyimpan data
+    $sql = "INSERT INTO pemesanan_paket_wisata (nama_pemesan, nomor_hp, tanggal_pesan, waktu_perjalanan, jumlah_peserta, harga_paket, pelayanan, jumlah_tagihan)
+            VALUES ('$nama', '$nomor_hp', '$tanggal_pesan', '$waktu_perjalanan', '$jumlah_peserta', '$harga_paket', '$pelayanan', '$jumlah_tagihan')";
+
+    // Mengeksekusi query
+    if ($koneksi->query($sql) === TRUE) {
+        echo "Pesanan berhasil disimpan!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $koneksi->error;
+    }
+}
+
 // Jika ada permintaan untuk menghapus data
 if (isset($_GET['delete_id'])) {
-    $deleteId = intval($_GET['delete_id']); // Sanitize input
+    $deleteId = intval($_GET['delete_id']); // Sanitasi input
     $stmt = $koneksi->prepare("DELETE FROM pemesanan_paket_wisata WHERE id = ?");
     $stmt->bind_param("i", $deleteId);
     if ($stmt->execute()) {
@@ -56,7 +79,7 @@ $result = $koneksi->query($sql);
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        
+                        <th>ID</th>
                         <th>Nama</th>
                         <th>Phone</th>
                         <th>Jumlah Peserta</th>
